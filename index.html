@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>70 Million Counter</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>70 Million Counter</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<div class="container">
+
 <h1>70 Million Counter</h1>
 
-<div id="counter">
-    <span id="current">0</span> / 70,000,000
+<div class="counter-box">
+<span id="current">0</span>
+<span class="total"> / 70,000,000</span>
+</div>
+
+<div class="progress-container">
+<div id="progress-bar"></div>
 </div>
 
 <div class="buttons">
-    <button onclick="addCount(1)">+1</button>
-    <button onclick="addCount(100)">+100</button>
-    <button onclick="addCount(1000)">+1000</button>
+
+<div class="btn-group">
+<button onclick="addCount(1)">+1</button>
+<button onclick="addCount(100)">+100</button>
+<button onclick="addCount(1000)">+1000</button>
+</div>
+
+<div class="btn-group">
+<button class="dec" onclick="removeCount(1)">-1</button>
+<button class="dec" onclick="removeCount(100)">-100</button>
+<button class="dec" onclick="removeCount(1000)">-1000</button>
+</div>
+
+</div>
+
+<div class="stats">
+<p id="percentage"></p>
+</div>
+
 </div>
 
 <script src="script.js"></script>
